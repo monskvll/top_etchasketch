@@ -1,12 +1,24 @@
 #container {
     display: flex;
     flex-flow: row wrap;
-    max-width: 19em;  
+    max-width: 19em; 
+}
+
+#clearButton {
+    width: 5em;
+    height: 5em;
 }
 
 .square {
-    background-color: red;
+    background-color: white;
     width: 1em;
     height: 1em;
     border: 1px solid black;    
+}
+
+.square-test {
+    background-color: black;
+    width: 1em;
+    height: 1em;
+    border: 1px solid black; 
 }
