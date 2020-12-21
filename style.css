@@ -1,24 +1,28 @@
-#container {
+#etch-container {
     display: flex;
-    flex-flow: row wrap;
-    max-width: 19em; 
+    align-items: center;    
+    flex-flow: column;
 }
 
-#clearButton {
+#container {
+    display: grid;    
+    width: 500px;
+    height: 500px;
+    grid-gap: 0;
+    border: 2px solid black;    
+}
+
+#reset-button {    
     width: 5em;
     height: 5em;
+    margin: 2em;
 }
 
-.square {
-    background-color: white;
-    width: 1em;
-    height: 1em;
-    border: 1px solid black;    
+.square {    
+    background-color: white;    
 }
 
-.square-test {
+.square-active {
     background-color: black;
-    width: 1em;
-    height: 1em;
-    border: 1px solid black; 
+    transition: .5s;    
 }
