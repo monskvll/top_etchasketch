@@ -1,7 +1,12 @@
+body {    
+    background: radial-gradient(circle, rgb(20, 16, 13) 0%, rgb(48, 36, 32) 100%);
+}
+
 #etch-container {
     display: flex;
     align-items: center;    
     flex-flow: column;
+    margin: 5em;
 }
 
 #container {
@@ -9,20 +14,30 @@
     width: 500px;
     height: 500px;
     grid-gap: 0;
-    border: 2px solid black;    
+    border: 2px solid #BF6300;    
 }
 
-#reset-button {    
+button {    
     width: 5em;
     height: 5em;
-    margin: 2em;
+    margin: 5em;
+    background-color: #BF6300;    
+    border: 2px solid #ff8400;
+    color: white;
+    transition: .25s;
+}
+
+button:hover {
+    background-color: #ff8400;
+    color: #2E2A26;
+    font-weight: 700;
 }
 
 .square {    
-    background-color: white;    
+    background-color: white;
+    transition: .5s;    
 }
 
-.square-active {
-    background-color: black;
-    transition: .5s;    
+.square-color {
+    background-color: red;
 }

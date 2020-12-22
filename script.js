@@ -4,7 +4,6 @@ const reset = document.querySelector('#reset-button');
 window.addEventListener('load', setDefaultGrid);
 reset.addEventListener('click', changeSize)
 
-
 function setDefaultGrid() {
     setGridSize(16);
     fillGrid(16);
@@ -12,7 +11,7 @@ function setDefaultGrid() {
 
 function setGridSize(size) {
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;        
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;                
 }
 
 function fillGrid(size) {
@@ -22,10 +21,10 @@ function fillGrid(size) {
         gridSquare.setAttribute('class', 'square');
         container.appendChild(gridSquare);
         
-        gridSquare.addEventListener("mouseenter", function (event) {
-            gridSquare.classList.add('square-active');    
+        gridSquare.addEventListener("mouseover", function (event) {
+            /* gridSquare.classList.add('square-color');    can be used with class instead*/
+            gridSquare.style.backgroundColor = `hsl(${Math.random() * 50}, 100%, 50%)`;
         });
-
     }
 }
 
@@ -49,6 +48,9 @@ function changeSize() {
 function clearGrid() {    
     const gridSquaresArray = Array.from(container.childNodes);
     gridSquaresArray.forEach((container) => {
-        container.classList.remove('square-active');
+        /* container.classList.remove('square-active');     used to remove class instead*/         
+        container.style.backgroundColor = 'white';
     });    
 }
+
+/* Thanks to rlmoser99, michalosman and RebeccaML for their well-written code which I actively consulted during moments of terrible doubt */
